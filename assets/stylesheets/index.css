@@ -1,0 +1,12 @@
+
+@font-face {
+    /* src: local('/assets/fonts/REM.zip'); */
+    src: url('../fonts/rem/REM-VariableFont_wght.ttf'),
+        url('../fonts/rem/REM-Italic-VariableFont_wght.ttf'),
+        url('../fonts/rem/static/REM-Bold.ttf');
+    font-family: 'rem';
+}
+
+.rem-family {
+    font-family: 'rem';
+}

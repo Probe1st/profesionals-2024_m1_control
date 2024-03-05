@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take Your Car</title>
+    <script src="tailwind.js"></script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .container {
+                @apply flex flex-col 
+                justify-start items-center 
+                min-h-screen md:w-2/3 
+                px-3 py-1 mx-auto; 
+            }
+
+            html {
+                @apply text-white bg-gray-700;
+            }
+
+            header {
+                @apply flex flex-wrap md:flex-row 
+                justify-between 
+                w-full 
+                space-y-3 md:space-y-0 mb-10
+                border-b border-l border-orange-500;
+            }
+
+            footer {
+                @apply flex flex-row-reverse 
+                justify-between items-start
+                w-full 
+                space-y-3 md:space-y-0 mt-10
+                border-t border-r border-orange-500;
+            }
+
+            nav {
+                @apply flex flex-wrap 
+                justify-end
+                w-1/2 sm:min-w-max
+                gap-2;
+            }
+            
+            .logo {
+                @apply flex flex-col 
+                justify-end 
+                -space-y-1 
+                font-bold text-xl 
+                max-w-min max-w-min;
+            }
+
+            .logo p {
+                @apply pl-1 
+            }
+
+            .logo-rev {
+                @apply flex flex-col 
+                /* justify-start */
+                -space-y-1 
+                font-bold text-xl 
+                max-w-min;
+            }
+
+            .logo-rev p {
+                @apply pr-1 ;
+            }
+
+            main {
+                @apply my-auto;
+            }
+
+            button {
+                @apply border rounded-xl px-3 py-2;
+            }
+
+            input {
+                @apply bg-inherit w-2/3 text-white outline-none text-end;
+            }
+
+            form>div {  
+                @apply flex flex-row justify-between border-b pb-1;
+            }
+            
+            h1 {
+                @apply text-xl font-bold mt-3 mb-10;
+            }
+
+            h2 {
+                @apply text-lg font-bold mt-10 text-accent;
+            }
+
+            .text-accent {
+                @apply text-xl  text-orange-400;
+            }
+
+            .data-driver-from {
+                @apply flex flex-col space-y-5 min-w-min md:w-[330px] mx-auto;
+            }
+
+            .data-driver-from>div {
+                @apply flex flex-row justify-between items-center border-b pb-1;
+            }
+
+            .data-driver-from>div>input {
+                @apply w-1/2;
+            }
+
+            .data-driver-from label {
+                @apply w-1/2;
+            }
+
+            .card-auto {
+                @apply flex flex-col 
+                border border-orange-500 
+                px-3 py-3 space-y-3 my-auto
+                min-w-min h-min
+                cursor-pointer;
+            }
+
+            .card-auto>div>div {
+                @apply flex flex-col space-y-3;
+            }
+
+            .card-auto>div>img {
+                @apply self-center;
+            }
+
+            .card-auto>div>div>div {
+                @apply flex flex-row 
+                justify-between items-center
+                border-b
+                pb-1;
+            }
+
+            .card-auto>div>div>div>p:first-child {
+                @apply w-1/2;
+            }
+
+            button {
+                @apply border rounded-xl px-3 py-2;
+            }
+
+            .field {
+                @apply bg-inherit w-2/3 text-white outline-none text-end;
+            }
+
+            .data-user>div {  
+                @apply flex flex-row justify-between border-b pb-1;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="./assets/stylesheets/index.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo rem-family">
+                <a href="index.html">
+                    <p>Take<span class="text-orange-500">Your</span>Car</p>
+                </a>
+            </div>
+
+            <nav>
+                <a href="#act">Акции</a>
+                <a href="search.html">Поиск</a>
+                <a href="register.html">Регистрация</a>
+                <a class="" href="login.html">Личный кабинет</a>
+            </nav>
+        </header>
+
+        <main class="flex flex-col flex-grow justify-start w-full">
+            <div class="data-user flex flex-col space-y-5">
+                <h1>Личный кабинет</h1>
+                <div>
+                    <p>Имя</p>
+                    <p>Иван</p>
+                </div>
+                <div>
+                    <p>Фамилия</p>
+                    <p>Иванов</p>
+                </div>
+                <div>
+                    <p>Количество бронирований</p>
+                    <p class="text-accent">100</p>
+                </div>
+                <div>
+                    <p>Количество бонусных баллов</p>
+                    <p class="text-accent">10 000</p>
+                </div>
+
+                <button class="!mt-10 border border-orange-500 transition-all hover:-translate-y-1 hover:bg-orange-500">Выход</button>
+            </di>
+        </main>
+
+        <footer>
+            <div class="logo-rev rem-family">
+                <a href="index.html">
+                    <p>Take<span class="text-orange-500">Your</span>Car</p>
+                </a>
+            </div>
+
+            <div class="flex flex-wrap justify-start gap-2">
+                <p>Телефон: 8 (800) 555-35-35</p>
+                <a href="index.html">Главная</a>
+                <a href="register.html">Регистрация</a>
+                <a href="login.html">Вход</a>
+                <a href="search.html">Поиск</a>
+                <a href="profile.html">Личный кабинет</a>
+                <a href="booking.html">Бронирование</a>
+                <a href="booking_management.html">Управление бронированием</a>
+                <a href="seat.html">Выбор авто</a>
+            </div>
+
+        </footer>
+    </div>
+</body>
+
+</html>
